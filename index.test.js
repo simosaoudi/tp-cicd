@@ -1,5 +1,4 @@
 
-
 const { addition, soustraction } = require("./index");
 
 test("2 + 3 = 5", () => {
