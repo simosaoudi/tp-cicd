@@ -3,7 +3,7 @@
 const { addition, soustraction } = require("./index");
 
 test("2 + 3 = 5", () => {
-  expect(addition(2, 3)).toBe(5);
+  expect(addition(2, 3)).toBe(999);
 });
 
 test("5 - 3 = 2", () => {
