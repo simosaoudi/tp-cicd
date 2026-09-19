@@ -32,6 +32,17 @@ jobs:
 
       - name: Déployer en staging
         run: bash deploy.sh staging
+  
+  deploy-production:
+    needs: deploy-staging
+    runs-on: ubuntu-latest
+    environment: production
+    steps:
+      - name: Récupérer le code
+        uses: actions/checkout@v4
+
+      - name: Déployer en production
+        run: bash deploy.sh production
 
   package:
     needs: build-and-test
